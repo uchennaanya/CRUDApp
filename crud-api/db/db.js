@@ -2,7 +2,6 @@ const { Mongoose } = require('mongoose')
 
 require('dotenv').config()
 const mongoose = require('mongoose')
-//const { use } = require('../../app')
 
 module.exports = {
     connect: () => {
