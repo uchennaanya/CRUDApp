@@ -14,29 +14,30 @@ This project is a CRUD App with MogoDB database and Express
 {
     "firstname":"Uchenna",
     "lastname":"Anya",
-    "age":36
-    
+    "age":36   
 }
+
 ```
 - Response
 
 ```JSON
-    {
-    "status": "success",
-    "responseMessage": {
-        "_id": "60950b5a505ecb00156d7c04",
-        "firstname": "Uchenna",
-        "lastname": "Anya",
-        "age": 36,
-        "createdAt": "2021-05-07T09:41:46.485Z",
-        "updatedAt": "2021-05-07T09:41:46.485Z",
-        "__v": 0
-    }
+   {
+        message: "Success!",
+        response: [
+
+            {
+            _id: "609aab715cb9ca0015f8ac15",
+            firstname: "Oleh",
+            lastname: "Uduma",
+            age: 80,
+            __v: 0
+            }
+        ]
 }
 ```
 
-## Get All Users
-> This route fetch all the users in the database
+## Get A Users
+> This route fetch a user in the database
 
 - **ENDPOINT :**  `https://my-crud-app-19.herokuapp.com/api/v1/getuser`
 
@@ -85,4 +86,4 @@ This project is a CRUD App with MogoDB database and Express
 
 - **METHOD :** `DELETE`
 # request.params.id
-{_id :609aab715cb9ca0015f8ac15}-
+{_id :609aab715cb9ca0015f8ac15 }-
