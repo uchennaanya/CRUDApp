@@ -1,13 +1,13 @@
 const { Mongoose } = require('mongoose')
 
-require('.env').config()
+require('dotenv').config()
 const mongoose = require('mongoose')
-const { use } = require('../../app')
+//const { use } = require('../../app')
 
 module.exports = {
     connect: () => {
         mongoose.connect(
-            process.env.DB_URI, {
+            process.env.DB_URI_ONLINE, {
             useUnifiedTopology: true,
             useCreateIndex: true,
             useNewUrlParser: true,
@@ -17,7 +17,7 @@ module.exports = {
         connection.once('open', () => {
             console.log('success! ')
         })
-        connection.on('error', console.log('Error! '))
+        connection.on('error', () => console.log('failed to connect to db'))
     }
 }
 
