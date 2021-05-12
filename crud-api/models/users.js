@@ -12,7 +12,7 @@ const userSchema = new Schema({
         required: true,
     },
     "country": {
-        type: Number,
+        type: String,
         required: true
     }
 

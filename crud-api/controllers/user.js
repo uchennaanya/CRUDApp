@@ -31,6 +31,14 @@ exports.getAllUser = async (req, res) => {
     })
 }
 
+exports.getSingleUser = async (req, res) => {
+    let getUsers = await User.findOne({ "_id": req.params.id })
+    return res.json({
+        message: "Success!",
+        response: getUsers
+    })
+}
+
 exports.updateUserById = async (req, res) => {
     try {
         let { names, email, country } = req.body

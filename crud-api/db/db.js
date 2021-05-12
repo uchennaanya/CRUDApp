@@ -1,8 +1,10 @@
-const { Mongoose } = require('mongoose')
+// const { Mongoose } = require('mongoose')
 
 require('dotenv').config()
 const mongoose = require('mongoose')
 
+
+// Exporting connection handle
 module.exports = {
     connect: () => {
         mongoose.connect(
