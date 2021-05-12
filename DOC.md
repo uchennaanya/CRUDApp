@@ -33,8 +33,8 @@ This project is a CRUD App with MogoDB database and Express
 }
 ```
 
-## Get A Users
-> This route fetch a user in the database
+## Get All Users
+> This route fetch all users in the database
 
 - **ENDPOINT :**  `https://my-crud-app-19.herokuapp.com/api/v1/getusers`
 - Respponse
@@ -62,7 +62,7 @@ This project is a CRUD App with MogoDB database and Express
 - **METHOD :** `GET`
 
 ## Get A User By ID
-> This route allows you fetch a user by providing user ID
+> This route allows you to fetch a user by providing user ID
 
 - **ENDPOINT :** `https://my-crud-app-19.herokuapp.com/api/v1/getuser/:id`
 
