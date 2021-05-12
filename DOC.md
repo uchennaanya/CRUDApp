@@ -12,9 +12,9 @@ This project is a CRUD App with MogoDB database and Express
 - **PARAMETERS :**
 ```JSON
 {
-    "firstname":"Uchenna",
-    "lastname":"Anya",
-    "age":36   
+    "names":"Uchenna Martins Anya",
+    "email":"martinsanya19@gmail",
+    "country": "Nigeria"  
 }
 
 ```
@@ -22,24 +22,42 @@ This project is a CRUD App with MogoDB database and Express
 
 ```JSON
    {
-        message: "Success!",
-        response: [
-
-            {
-            _id: "609aab715cb9ca0015f8ac15",
-            firstname: "Oleh",
-            lastname: "Uduma",
-            age: 80,
-            __v: 0
-            }
-        ]
+    "message": "Success!",
+    "response": {
+        "_id": "609bdde60e00d50015edbe7c",
+        "names": "Uchenna Martins Anya",
+        "email": "martinsanya19@gmail.com",
+        "country": "Nigeria",
+        "__v": 0
+    }
 }
 ```
 
 ## Get A Users
 > This route fetch a user in the database
 
-- **ENDPOINT :**  `https://my-crud-app-19.herokuapp.com/api/v1/getuser`
+- **ENDPOINT :**  `https://my-crud-app-19.herokuapp.com/api/v1/getusers`
+- Respponse
+```JSON
+{
+    "message": "Success!",
+    "response": [
+        {
+            "_id": "609bdde60e00d50015edbe7c",
+            "names": "Uchenna Martins Anya",
+            "email": "martinsanya19@gmail.com",
+            "country": "Nigeria",
+            "__v": 0
+        },
+        {
+            "_id": "609bde700e00d50015edbe7d",
+            "names": "Emekah Okeh",
+            "email": "emeka@gmail.com",
+            "country": "Nigeria",
+            "__v": 0
+        }
+    ]
+}
 
 - **METHOD :** `GET`
 
@@ -52,21 +70,19 @@ This project is a CRUD App with MogoDB database and Express
 
 - **PARAMETERS :**
 # request.params.id
-{_id: "609aab715cb9ca0015f8ac15"}
+{_id: "609bdde60e00d50015edbe7c"}
 
 - Respponse
 ```JSON
 {
-    message: "Success!",
-    response: [
-    {
-        _id: "609aab715cb9ca0015f8ac15",
-        firstname: "Oleh",
-        lastname: "Uduma",
-        age: 80,
-        __v: 0
-        }
-    ]
+    "message": "Success!",
+    "response": {
+        "_id": "609bdde60e00d50015edbe7c",
+        "names": "Uchenna Martins Anya",
+        "email": "martinsanya19@gmail.com",
+        "country": "Nigeria",
+        "__v": 0
+    }
 }
 
 ```
@@ -77,7 +93,7 @@ This project is a CRUD App with MogoDB database and Express
 
 - **METHOD :** `PUT`
 # request.params.id
-{_id: "609aab715cb9ca0015f8ac15"}
+{_id: "609bdde60e00d50015edbe7c"}
 
 
 ## Delete User By It ID
@@ -86,4 +102,4 @@ This project is a CRUD App with MogoDB database and Express
 
 - **METHOD :** `DELETE`
 # request.params.id
-{_id :609aab715cb9ca0015f8ac15 }-
+{_id :609bdde60e00d50015edbe7c }-
