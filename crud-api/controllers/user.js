@@ -54,7 +54,6 @@ exports.updateUserById = async (req, res) => {
             response: "Fail to update"
         })
     }
-
 }
 
 exports.deleteUser = async (req, res) => {
@@ -64,7 +63,7 @@ exports.deleteUser = async (req, res) => {
             message: "Sucess",
             response: deleteuser
         })
-    } catch (err) {
 
+    } catch (err) {
     }
 }
